@@ -24,59 +24,64 @@ class PaperWall extends StatelessWidget {
           elevation: 2,
         ),
         body: Center(
-          child: CarouselSlider(
-            options: CarouselOptions(
-                aspectRatio: 9 / 16,
-                viewportFraction: 0.8,
-                autoPlay: true,
-                autoPlayAnimationDuration: Duration(milliseconds: 800),
-                autoPlayInterval: Duration(seconds: 2),
-                autoPlayCurve: Curves.fastOutSlowIn),
-            items: _images.map((i) {
-              return Builder(
-                builder: (BuildContext context) {
-                  if (_images.indexOf(i) < 3) {
-                    return Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.symmetric(horizontal: 5.0),
-                        decoration: BoxDecoration(color: Colors.transparent),
-                        child: new Column(
-                          children: <Widget>[
-                            new GestureDetector(
-                                child: Image.network(
-                              i,
-                              fit: BoxFit.fill,
-                            )),
-                            Text(
-                              "Loaded from Web",
-                              style:
-                                  TextStyle(fontSize: 25, color: Colors.white),
-                            ),
-                          ],
-                        ));
-                  } else {
-                    return Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.symmetric(horizontal: 5.0),
-                        decoration: BoxDecoration(color: Colors.transparent),
-                        child: new Column(
-                          children: <Widget>[
-                            new GestureDetector(
-                                child: Image.asset(
-                              i,
-                              fit: BoxFit.fill,
-                            )),
-                            Text(
-                              "Loaded from Assets",
-                              style:
-                                  TextStyle(fontSize: 25, color: Colors.white),
-                            ),
-                          ],
-                        ));
-                  }
-                },
-              );
-            }).toList(),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CarouselSlider(
+              options: CarouselOptions(
+                  aspectRatio: 9 / 16,
+                  viewportFraction: 0.8,
+                  autoPlay: true,
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  autoPlayInterval: Duration(seconds: 2),
+                  autoPlayCurve: Curves.fastOutSlowIn),
+              items: _images.map((i) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    if (_images.indexOf(i) < 3) {
+                      return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(color: Colors.transparent),
+                          child: new Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: <Widget>[
+                              new GestureDetector(
+                                  child: Image.network(
+                                i,
+                                fit: BoxFit.fill,
+                              )),
+                              Text(
+                                "Loaded from Web",
+                                style: TextStyle(
+                                    fontSize: 25, color: Colors.white),
+                              ),
+                            ],
+                          ));
+                    } else {
+                      return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(color: Colors.transparent),
+                          child: new Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: <Widget>[
+                              new GestureDetector(
+                                  child: Image.asset(
+                                i,
+                                fit: BoxFit.fill,
+                              )),
+                              Text(
+                                "Loaded from Assets",
+                                style: TextStyle(
+                                    fontSize: 25, color: Colors.white),
+                              ),
+                            ],
+                          ));
+                    }
+                  },
+                );
+              }).toList(),
+            ),
           ),
         ),
       ),
