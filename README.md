@@ -1,6 +1,9 @@
 # FlutterApps
 Repo consisting all basic flutter apps that I develop as I learn flutter
+
 # Here's my timeline
+
+>You can open each project to find the concepts learnt in that particular project.
 
 1. [**test_app**](https://github.com/AthreshK/FlutterApps/tree/master/test_app)
 2. [**layout_learn**](https://github.com/AthreshK/FlutterApps/tree/master/layout_learn)
