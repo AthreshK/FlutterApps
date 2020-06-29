@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 void main() {
   runApp(BikeApp());
@@ -27,13 +28,18 @@ class BikeSounds extends StatefulWidget {
 
 class _BikeSoundsState extends State<BikeSounds> {
   int bikeNum = 5;
+  final assetsAudioPlayer = AssetsAudioPlayer();
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         FlatButton(
-          onPressed: () {},
+          onPressed: () {
+            assetsAudioPlayer.open(
+              Audio("assets/Bike_$bikeNum.mp3"),
+            );
+          },
           child: Container(
             margin: EdgeInsets.all(10),
             width: MediaQuery.of(context).size.width,
@@ -57,6 +63,7 @@ class _BikeSoundsState extends State<BikeSounds> {
         RaisedButton(
           onPressed: () {
             setState(() {
+              assetsAudioPlayer.stop();
               bikeNum = Random().nextInt(10) + 1;
             });
           },
