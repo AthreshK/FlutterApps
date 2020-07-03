@@ -16,7 +16,7 @@ packages:
     source: hosted
     version: "1.6.0"
   assets_audio_player:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: assets_audio_player
       url: "https://pub.dartlang.org"
@@ -90,6 +90,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_icons:
+    dependency: "direct main"
+    description:
+      name: flutter_icons
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -100,6 +107,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  google_fonts:
+    dependency: "direct main"
+    description:
+      name: google_fonts
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0"
   http:
     dependency: transitive
     description:
@@ -114,6 +128,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.4"
+  icon_text_button:
+    dependency: "direct main"
+    description:
+      name: icon_text_button
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.7"
   image:
     dependency: transitive
     description:
@@ -142,6 +163,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.8"
+  nice_button:
+    dependency: "direct main"
+    description:
+      name: nice_button
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.7"
   path:
     dependency: transitive
     description:
@@ -310,4 +338,4 @@ packages:
     version: "3.6.1"
 sdks:
   dart: ">=2.7.0 <3.0.0"
-  flutter: ">=1.12.13+hotfix.6 <2.0.0"
+  flutter: ">=1.17.0 <2.0.0"

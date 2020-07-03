@@ -21,8 +21,13 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  nice_button: ^0.1.7
   flutter:
     sdk: flutter
+  assets_audio_player: ^2.0.6+4
+  icon_text_button: ^0.1.7
+  flutter_icons: ^1.1.0
+  google_fonts: ^1.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -32,7 +37,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  assets_audio_player: ^2.0.6+4
+
 
 
 # For information on the generic Dart part of this file, see the
