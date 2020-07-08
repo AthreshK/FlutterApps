@@ -1,16 +1,9 @@
-# whattodo_covid19
+# SelfAssessment-Covid19
 
-Take a self assessment answering Yes/No to certain questions and the app will tell you what to do during this covid 19 pandemic !
+Take a self assesament on your current health status and find out the best thing to do in middle of this crisis !
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Concepts learnt
+- Objects oriented programming with dart
+- Project structuring
+- The project follows the flowchart :
+![covid flowchart](https://i.ibb.co/80yPfJv/5e67cb9ca7242338cd6ce50f-covid-flowchart.png)
