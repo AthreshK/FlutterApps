@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:knowyour_percentage/constants.dart';
 import 'package:numberpicker/numberpicker.dart';
-
-import 'constants.dart';
 
 class BuildSubject extends StatelessWidget {
   BuildSubject({this.marks, this.subject, this.marksFun, this.subFun});

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'CustomButton.dart';
-import 'constants.dart';
+import 'package:knowyour_percentage/components/CustomButton.dart';
+import 'package:knowyour_percentage/constants.dart';
 
 class LandingPage extends StatefulWidget {
   @override

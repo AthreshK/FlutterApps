@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:knowyour_percentage/screens/Calculator.dart';
+import 'package:knowyour_percentage/screens/LandingPage.dart';
 
-import 'Calculator.dart';
-import 'LandingPage.dart';
 import 'constants.dart';
 
 void main() {

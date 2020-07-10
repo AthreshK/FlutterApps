@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:knowyour_percentage/CustomButton.dart';
-import 'package:knowyour_percentage/ResultsPage.dart';
-
-import 'BuildSubject.dart';
-import 'constants.dart';
+import 'package:knowyour_percentage/components/BuildSubject.dart';
+import 'package:knowyour_percentage/components/CustomButton.dart';
+import 'package:knowyour_percentage/constants.dart';
+import 'package:knowyour_percentage/screens/ResultsPage.dart';
 
 class Calculator extends StatefulWidget {
   @override

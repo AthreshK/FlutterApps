@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'constants.dart';
+import 'package:knowyour_percentage/constants.dart';
 
 class CustomButton extends StatelessWidget {
   final String label;
