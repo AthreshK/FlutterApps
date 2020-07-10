@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'Calculator.dart';
 import 'LandingPage.dart';
+import 'constants.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,12 +15,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
-        primaryColor: Color(0XFF32e0c4),
-        scaffoldBackgroundColor: Color(0XFF222831),
+        primaryColor: accent_color,
+        scaffoldBackgroundColor: back_dark,
       ),
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
         '/': (context) => LandingPage(),
+        '/Calculator': (context) => Calculator(),
       },
     );
   }

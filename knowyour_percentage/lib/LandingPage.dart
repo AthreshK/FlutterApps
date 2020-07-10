@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'CustomButton.dart';
 import 'constants.dart';
 
 class LandingPage extends StatefulWidget {
@@ -13,11 +14,22 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text(
-            'Welcome',
-            style: GoogleFonts.kanit(fontSize: 30, color: back_dark),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(150),
+        child: AppBar(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(
+              bottom: Radius.circular(80),
+            ),
+          ),
+          flexibleSpace: Padding(
+            padding: const EdgeInsets.only(top: 50.0),
+            child: Center(
+              child: Text(
+                'Welcome',
+                style: GoogleFonts.kanit(fontSize: 50, color: back_dark),
+              ),
+            ),
           ),
         ),
       ),
@@ -26,40 +38,15 @@ class _LandingPageState extends State<LandingPage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           CustomButton(
-            label: 'Calculate My CGPA',
+            label: 'Calculate My Percentage',
+            onTap: () {
+              Navigator.pushNamed(context, '/Calculator');
+            },
           ),
           CustomButton(
-            label: 'Calculate My GPA',
+            label: 'Calculate My Marks',
           ),
-          CustomButton(
-            label: 'Grade Improvement',
-          )
         ],
-      ),
-    );
-  }
-}
-
-class CustomButton extends StatelessWidget {
-  final String label;
-
-  const CustomButton({@required this.label});
-
-  Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.all(30),
-      elevation: 20,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30),
-      ),
-      color: accent_color,
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Text(
-          label,
-          textAlign: TextAlign.center,
-          style: GoogleFonts.kanit(fontSize: 25, color: back_dark),
-        ),
       ),
     );
   }
