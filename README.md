@@ -10,5 +10,6 @@ Repo consisting all basic flutter apps that I develop as I learn flutter
 3. [**paper_wall**](https://github.com/AthreshK/FlutterApps/tree/master/paper_wall)
 4. [**bike_sounds**](https://github.com/AthreshK/FlutterApps/tree/master/bike_sounds)
 5. [**selfassessment_covid19**](https://github.com/AthreshK/FlutterApps/tree/master/selfassessment_covid19)
+6. [**knowyour_percentage**](https://github.com/AthreshK/FlutterApps/tree/master/knowyour_percentage)
 
 ![more coming soon](https://i.ibb.co/qrmBT0m/more-coming.png)
