@@ -7,4 +7,6 @@ A  Flutter application that helps you calculate  your school exam percentage!
 - Modularity of widgets 
 - Usage of item pickers 
 - Custom widget making
+- Folder structuring 
+
 
