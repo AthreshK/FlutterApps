@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "911531352218",
+    "firebase_url": "https://messageview-b5fec.firebaseio.com",
+    "project_id": "messageview-b5fec",
+    "storage_bucket": "messageview-b5fec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911531352218:android:27fbf7cd54a535d0d0bf23",
+        "android_client_info": {
+          "package_name": "com.athreshkiran.message_view"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911531352218-h780rjdoevupl9hc61trgk3o4koal5rl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0DP2_Jbkqkl_drdakkVpUrHPj1baL6JY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911531352218-h780rjdoevupl9hc61trgk3o4koal5rl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

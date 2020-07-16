@@ -1,8 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:message_view/animations/Animation.dart';
 
 class LoginScreen extends StatelessWidget {
+  FirebaseAuth _auth = FirebaseAuth.instance;
+  FirebaseUser _user;
+
+  GoogleSignIn _googleSignIn = new GoogleSignIn();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,34 +144,40 @@ class LoginScreen extends StatelessWidget {
                         Center(
                           child: FadeAnimation(
                               1.8,
-                              Container(
-                                height: 50,
-                                decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.black),
-                                    borderRadius: BorderRadius.circular(50),
-                                    color: Colors.white),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 20),
-                                      child: Image(
-                                          image: AssetImage(
-                                              "assets/google_logo.png"),
-                                          height: 35.0),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 12, right: 20),
-                                      child: Text(
-                                        "Sign in with Google",
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold),
+                              GestureDetector(
+                                onTap: () {
+                                  handleSignIn();
+                                },
+                                child: Container(
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(color: Colors.black),
+                                      borderRadius: BorderRadius.circular(50),
+                                      color: Colors.white),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 20),
+                                        child: Image(
+                                            image: AssetImage(
+                                                "assets/google_logo.png"),
+                                            height: 35.0),
                                       ),
-                                    ),
-                                  ],
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 12, right: 20),
+                                        child: Text(
+                                          "Sign in with Google",
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               )),
                         )
@@ -179,5 +191,17 @@ class LoginScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> handleSignIn() async {
+    GoogleSignInAccount googleSignInAccount = await _googleSignIn.signIn();
+    GoogleSignInAuthentication googleSignInAuthentication =
+        await googleSignInAccount.authentication;
+
+    AuthCredential credential = GoogleAuthProvider.getCredential(
+        idToken: googleSignInAuthentication.idToken,
+        accessToken: googleSignInAuthentication.accessToken);
+
+    await _auth.signInWithCredential(credential);
   }
 }
