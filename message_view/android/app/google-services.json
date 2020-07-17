@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "911531352218-pevd7atgf3kjlndurb71jfptu94c00gm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.athreshkiran.message_view",
+            "certificate_hash": "d091979a337192d7c8c43117387db5eea3e43495"
+          }
+        },
+        {
           "client_id": "911531352218-h780rjdoevupl9hc61trgk3o4koal5rl.apps.googleusercontent.com",
           "client_type": 3
         }

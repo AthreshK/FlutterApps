@@ -10,11 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      initialRoute: '/',
-      routes: <String, WidgetBuilder>{
-        '/': (context) => LoginScreen(),
-      },
+      title: 'Messages Viewer',
+      home: LoginScreen(),
     );
   }
 }
